@@ -94,17 +94,17 @@ h2 {
 }
 
 .adv-text {
+  width: auto;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
-  line-height: 43px;
   text-align: center;
   color: white;
   margin-top: 0;
 }
 
 .adv-text-div {
-  width: 1040px;
+  width: auto;
   margin: 0 auto 0 auto;
 }
 
