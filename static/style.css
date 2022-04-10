@@ -1,4 +1,4 @@
-.main-body {
+body {
   min-height: 100vh;
   width: 100%;
   margin: 0;
@@ -6,6 +6,7 @@
   background: linear-gradient(180deg, rgba(255, 0, 245, 0.64) 0%, #00d1ff 100%)
     no-repeat;
   font-family: "Montserrat", sans-serif;
+  color: #EBF1F2;
 }
 
 .profile {
@@ -17,7 +18,7 @@
 }
 
 .header {
-  background-color: #141414;
+  background-color: #1E4959;
   height: 47px;
   width: 100%;
 }
