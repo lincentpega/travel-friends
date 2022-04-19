@@ -19,23 +19,19 @@
     <div>
       <div class="person">
         <div class="photo">
-          <img src="static/resources/img/profile-photo.png" class="profile-photo-dating" />
+          <img src="static/resources/avatars/{{persons_list[0]['Photo']}}" class="profile-photo-dating" />
         </div>
         <div class="info">
-          <div class="name"><p>Margot {{persons_list[0][0]}}</p></div>
-          <div class="age"><p>Возраст</p></div>
-          <div class="age"><p>Страна</p></div>
-          <div class="age"><p>Языки</p></div>
-          <div class="age"><p>Контакты</p></div>
-          <div class="age"><p>О себе</p></div>
-          <p class="about-1-2">Australian actress and producer. Has received several accolades throughout
-            her career, including nominations for two Academy Awards, three Golden
-            Globe Awards, five Screen Actors Guild Awards and five British Academy
-            Film Awards. Time magazine named me one of the 100 most influential people
-            in the world in 2017 and I was ranked as one of the world's highest-paid
-            actresses by Forbes in 2019.
-          </p>
-        </div>
+          <div class="name"><p>{{persons_list[0]['Name']}}</p></div>
+          <div class="age"><p>Возраст - {{persons_list[0]['Age']}}</p></div>
+          <div class="country"><p>Страна - {{persons_list[0]['Country']}}</p></div>
+          <div class="city"><p>Город - {{persons_list[0]['City']}}</p></div>
+          <div class="address"><p>Адрес - {{persons_list[0]['Address']}}</p></div>
+          
+          <div class="languages"><p>Языки - {{persons_list[0]['Languages']}}</p></div>
+          <div class="contacts"><p>Контакты - {{persons_list[0]['Contacts']}}</p></div>
+          <div class="about-1"><p>О себе</p></div>
+          <p class="about-2">{{persons_list[0]['About']}}</p>
       </div>
       </div>  
     

@@ -7,6 +7,7 @@ ID = 0
 Name = "Margot"
 Age = 31
 Country = "USA"
+City = "San-Francisco"
 Languages = "English, Русский"
 Address = "San-Francisco, Juvenile str, h. 41"
 Phone = "88005553535"
@@ -15,6 +16,6 @@ About = "Australian actress and producer. Has received several accolades through
 Photo = "0.png"
 
 
-db.insert_data(Name, Age, Country, Languages, Address, Phone, Contacts, About, Photo)
+db.insert_data(Name, Age, Country, City, Languages, Address, Phone, Contacts, About, Photo)
 
-print([record for record in main_db_client.view_records()])
+print([record for record in db.view_records()])

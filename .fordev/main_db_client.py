@@ -5,10 +5,11 @@ class DB:
     def __init__(self):
         meta = sa.MetaData()
         self.table = sa.Table('Profiles', meta,
-            sa.Column('id', sa.Integer, primary_key=True, nullable=False, unique=True, primary_key=True, autoincrement=True),
+            sa.Column('id', sa.Integer, primary_key=True),
             sa.Column('name', sa.String, nullable=False),
             sa.Column('age', sa.Integer),
             sa.Column('country', sa.String),
+            sa.Column('city', sa.String),
             sa.Column('languages', sa.String),
             sa.Column('address', sa.String),
             sa.Column('phone', sa.String),
@@ -17,7 +18,7 @@ class DB:
             sa.Column('photo', sa.String))
         
         self.engine = sa.create_engine('sqlite:///db/profiles.db', echo=True)
-        self.table.create(self.engine)
+        meta.create_all(self.engine)
         self.conn = self.engine.connect()
 
     def convert_data(self, record):
@@ -26,17 +27,20 @@ class DB:
             "Name": record[1],
             "Age": record[2],
             "Country": record[3],
-            "Languages": record[4],
-            "Address": record[5],
-            "Phone": record[6],
-            "Contacts": record[7],
-            "About": record[8],
-            "Photo": record[9],
+            "City": record[4],
+            "Languages": record[5],
+            "Address": record[6],
+            "Phone": record[7],
+            "Contacts": record[8],
+            "About": record[9],
+            "Photo": record[10],
         }
         return data
 
-    def insert_data(self, name, age, country, languages, address, phone, contacts, about, photo):
-        self.conn.execute(self.table.insert().values(name, age, country, languages, address, phone, contacts, about, photo))
+    def insert_data(self, name, age, country, city, languages, address, phone, contacts, about, photo):
+        self.conn.execute(self.table.insert().values(name=name, age=age, country=country,
+            city=city, languages=languages, address=address, phone=phone, contacts=contacts, about=about, photo=photo))
+    # Make the same everywhere
 
     def get_record(self, id: int):
         record = self.conn.execute(self.table.select().where(sa.table.c.id == id))
@@ -60,5 +64,6 @@ class DB:
     def delete_record(self, id):
         self.conn.execute(self.table.delete().where(sa.table.c.id == id))
 
-    def update_record(self, name, age, country, languages, address, phone, contacts, about, photo):
-        self.conn.execute(self.table.update().values(name, age, country, languages, address, phone, contacts, about, photo))
+    def update_record(self, name, age, country, city, languages, address, phone, contacts, about, photo):
+        self.conn.execute(self.table.update().values(name=name, age=age, country=country,
+            city=city, languages=languages, address=address, phone=phone, contacts=contacts, about=about, photo=photo))
