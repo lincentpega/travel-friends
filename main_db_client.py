@@ -14,8 +14,7 @@ class DB:
             sa.Column('phone', sa.String),
             sa.Column('contacts', sa.String),
             sa.Column('about', sa.String),
-            sa.Column('photo', sa.String),
-            sa.Column('is_watched', sa.Integer))
+            sa.Column('photo', sa.String))
         
         self.engine = sa.create_engine('sqlite:///db/profiles.db', echo=True)
         self.table.create(self.engine)
@@ -33,12 +32,11 @@ class DB:
             "Contacts": record[7],
             "About": record[8],
             "Photo": record[9],
-            "IsWatched": record[10],
         }
         return data
 
-    def insert_data(self, name, age, country, languages, address, phone, contacts, about, photo, is_watched):
-        self.conn.execute(self.table.insert().values(name, age, country, languages, address, phone, contacts, about, photo, is_watched))
+    def insert_data(self, name, age, country, languages, address, phone, contacts, about, photo):
+        self.conn.execute(self.table.insert().values(name, age, country, languages, address, phone, contacts, about, photo))
 
     def get_record(self, id: int):
         record = self.conn.execute(self.table.select().where(sa.table.c.id == id))
@@ -62,5 +60,5 @@ class DB:
     def delete_record(self, id):
         self.conn.execute(self.table.delete().where(sa.table.c.id == id))
 
-    def update_record(self, name, age, country, languages, address, phone, contacts, about, photo, is_watched):
-        self.conn.execute(self.table.update().values(name, age, country, languages, address, phone, contacts, about, photo, is_watched))
+    def update_record(self, name, age, country, languages, address, phone, contacts, about, photo):
+        self.conn.execute(self.table.update().values(name, age, country, languages, address, phone, contacts, about, photo))

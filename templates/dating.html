@@ -4,40 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="static/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="../static/dating.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Exo+2&display=swap" rel="stylesheet">
     <title>Dating</title>
   </head>
   <body class="profile">
     <div class="header">
-      <div class="header-text">
-        <a href="index">Главная</a>
-        <a href="subscribe">Подписка</a>
-        <a href="about">О нас</a>
-      </div>
+      <a class="header-elem" href="index">Главная</a>
+      <a class="header-elem" href="subscribe">Подписка</a>
+      <a class="header-elem" href="about">О нас</a>
     </div>
-    <h1 class="dating-name">Margot</h1>
-    <p class="age-1-1">Возраст</p>
-    <p class="age-1-2">31</p>
-    <p class="country-1-1">Страна</p>
-    <p class="country-1-2">United States</p>
-    <p class="language-1-1">Языки</p>
-    <p class="language-1-2">English</p>
-    <p class="about-1-1">О себе</p>
-    <p class="about-1-2">
-      Australian actress and producer. Has received several accolades throughout
-      her career, including nominations for two Academy Awards, three Golden
-      Globe Awards, five Screen Actors Guild Awards and five British Academy
-      Film Awards. Time magazine named me one of the 100 most influential people
-      in the world in 2017 and I was ranked as one of the world's highest-paid
-      actresses by Forbes in 2019.
-    </p>
-    <img src="static/resources/img/profile-photo.png" class="profile-photo-dating" />
+    <div>
+      <div class="person">
+        <div class="photo">
+          <img src="static/resources/img/profile-photo.png" class="profile-photo-dating" />
+        </div>
+        <div class="info">
+          <div class="name"><p>Margot {{persons_list[0][0]}}</p></div>
+          <div class="age"><p>Возраст</p></div>
+          <div class="age"><p>Страна</p></div>
+          <div class="age"><p>Языки</p></div>
+          <div class="age"><p>Контакты</p></div>
+          <div class="age"><p>О себе</p></div>
+          <p class="about-1-2">Australian actress and producer. Has received several accolades throughout
+            her career, including nominations for two Academy Awards, three Golden
+            Globe Awards, five Screen Actors Guild Awards and five British Academy
+            Film Awards. Time magazine named me one of the 100 most influential people
+            in the world in 2017 and I was ranked as one of the world's highest-paid
+            actresses by Forbes in 2019.
+          </p>
+        </div>
+      </div>
+      </div>  
+    
     <img src="static/resources/img/_No_.png" alt="" class="no-button">
     <img src="static/resources/img/_Yes_.png" alt="" class="yes-button">
   </body>

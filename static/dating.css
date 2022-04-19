@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', sans-serif;
+    background: #A8BBBF;
+
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+}
+
+
+a {
+    text-decoration: none;
+    color: #D9CAB0;
+}
+
+.header {
+    padding: 8px;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+    background-color: #1E4959;
+}
+
+.header-elem {
+    padding: 4px;
+    transition: 0.5s;
+}
+
+.header-elem::after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    transition: 300ms;
+}
+
+.header-elem:hover::after {
+    background-color: #D9CAB0;
+    width: 100%;
+}
+
+.bg-shadow {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.person {
+    display: flex;
+}

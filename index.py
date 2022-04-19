@@ -23,7 +23,9 @@ def profile():
 
 @app.route("/dating", methods=['GET', 'POST'])
 def dating():
-    return render_template("dating.html")
+    db = main_db_client.DB()
+    persons_data_list = db.view_records()
+    return render_template("dating.html", persons_list=persons_data_list, size=len(persons_data_list))
 
 
 @app.route("/about", methods=['GET', 'POST'])

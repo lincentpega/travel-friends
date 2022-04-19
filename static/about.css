@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', sans-serif;
+    background: #4D736F;
+
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+}
+
+
+a {
+    text-decoration: none;
+    color: #D9CAB0;
+}
+
+.header {
+    padding: 8px;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+    background-color: #4D736F;
+}
+
+.header-elem {
+    padding: 4px;
+    transition: 0.5s;
+}
+
+.header-elem::after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    transition: 300ms;
+}
+
+.header-elem:hover::after {
+    background-color: #D9CAB0;
+    width: 100%;
+}
+
+.bg-shadow {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.travel-friends {
+    position: fixed;
+    display: inline;
+    justify-content: center;
+    color: #EBF1F2;
+    font-size: 64px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.travel-friends > p {
+    width: 800px;
+    text-align: center;
+}
+
+.map-img {
+    position: fixed;
+    display: inline;
+    justify-content: center;
+    color: #D9CAB0;
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-text {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    color: #1E4959;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.about-text > p {
+    width: 800px;
+    text-align: center;
+    font-size: 28px;
+    color: #D9CAB0;
+}
