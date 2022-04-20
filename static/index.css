@@ -31,6 +31,9 @@ a {
 .header {
     padding: 8px;
     display: flex;
+    position: fixed;
+    width: 100vw;
+    top: 0;
     font-size: 20px;
     justify-content: space-evenly;
     background-color: #1E4959;
@@ -55,7 +58,7 @@ a {
 }
 
 .logo {
-    margin: 128px;
+    padding: 128px;
     display: flex;
     justify-content: center;
 }

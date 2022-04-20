@@ -21,6 +21,9 @@ a {
 .header {
     padding: 8px;
     display: flex;
+    position: fixed;
+    width: 100vw;
+    top: 0;
     font-size: 20px;
     justify-content: space-evenly;
     background-color: #4D736F;
@@ -62,7 +65,7 @@ a {
     color: #EBF1F2;
     font-size: 64px;
     left: 50%;
-    top: 40%;
+    top: calc(50% - 64px);
     transform: translate(-50%, -50%);
 }
 
