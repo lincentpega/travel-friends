@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -9,6 +9,9 @@ db = SQLAlchemy(app)
 
 class Profiles(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String, nullable=False)
+    password = db.Column(db.String, nullable=False)
+    email = db.Column(db.String, nullable=False)
     name = db.Column(db.String, nullable=False)
     age = db.Column(db.Integer)
     country = db.Column(db.String)
@@ -32,7 +35,34 @@ def index():
 
 @app.route("/registration", methods=['GET', 'POST'])
 def registration():
-    return render_template("registration.html")
+    if request.method == 'POST':
+        email = request.form['email']
+        username = request.form['username']
+        password = request.form['password']
+        name = request.form['name']
+        age = request.form['age']
+        country = request.form['country']
+        city = request.form['city']
+        languages = request.form['languages']
+        address = request.form['address']
+        contacts = request.form['contacts']
+        about_text = request.form['about_text']
+        phone = request.form['phone']
+        photo = request.form['photo']
+
+        new_profile = Profiles(email=email, username=username, password=password, name=name, age=age, country=country,
+                               city=city, languages=languages, address=address,
+                               contacts=contacts, about=about_text, phone=phone,
+                               photo=photo)
+
+        # try:
+        db.session.add(new_profile)
+        db.session.commit()
+        return redirect('/')
+        # except:
+        #     return "Ошибка при добавлении пользователя"
+    else:
+        return render_template("registration.html")
 
 
 @app.route("/profile", methods=['GET', 'POST'])

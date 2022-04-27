@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends 'base.html' %}
+
+{% block head %}
     <link rel="stylesheet" href="../static/about.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Exo+2&display=swap" rel="stylesheet">
     <title>О нас</title>
-  </head>
-  <body class="main-body">
+{% endblock %}
+
+{% block body %}
     <div class="header">
       <a class="header-elem" href="index">Главная</a>
       <a class="header-elem" href="subscribe">Подписка</a>
@@ -19,7 +14,7 @@
     <div class="bg-shadow"></div>
     <div class="travel-friends"><p>Travel Friends</p></div>
     <div class="map-img"><img src="static/resources/img/map.png" alt="Карта мира"/></div>
-    <div class="about-text"><p>Мы - развивающийся стартап, призванный дать путешественникам комфортную, 
+    <div class="about-text"><p>Мы - развивающийся стартап, призванный дать путешественникам комфортную,
       удобную и безопасную площадку для общения и знакомств</p></div>
-  </body>
-</html>
+{% endblock %}
+

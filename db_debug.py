@@ -1,6 +1,5 @@
 from app import Profiles, db
 
-ID = 0
 Name = "Margot"
 Age = 31
 Country = "USA"
@@ -18,8 +17,9 @@ Photo = "0.png"
 
 # db.session.add(me)
 # db.session.commit()
-# db.session.delete(Profiles.query.first())
-# db.session.commit()
+while len(Profiles.query.all()) > 0:
+    db.session.delete(Profiles.query.first())
+    db.session.commit()
 
 print([record for record in Profiles.query.all()])
 input()
