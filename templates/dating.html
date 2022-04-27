@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends 'base.html' %}
+
+{% block head %}
     <link rel="stylesheet" href="../static/dating.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Exo+2&display=swap" rel="stylesheet">
+{#    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">#}
     <title>Dating</title>
-  </head>
-  <body class="profile">
-    <div class="header">
+{% endblock %}
+
+
+{% block body %}
+     <div class="header">
       <a class="header-elem" href="index">Главная</a>
       <a class="header-elem" href="subscribe">Подписка</a>
       <a class="header-elem" href="about">О нас</a>
@@ -19,23 +16,26 @@
     <div>
       <div class="person">
         <div class="photo">
-          <img src="static/resources/avatars/{{persons_list[0]['Photo']}}" class="profile-photo-dating" />
+          <img src="static/resources/avatars/{{persons_list[0]['photo']}}" class="profile-photo-dating" />
         </div>
         <div class="info">
-          <div class="name"><p>{{persons_list[0]['Name']}}</p></div>
-          <div class="age"><p>Возраст - {{persons_list[0]['Age']}}</p></div>
-          <div class="country"><p>Страна - {{persons_list[0]['Country']}}</p></div>
-          <div class="city"><p>Город - {{persons_list[0]['City']}}</p></div>
-          <div class="address"><p>Адрес - {{persons_list[0]['Address']}}</p></div>
-          
-          <div class="languages"><p>Языки - {{persons_list[0]['Languages']}}</p></div>
-          <div class="contacts"><p>Контакты - {{persons_list[0]['Contacts']}}</p></div>
+          <div class="name"><p>{{persons_list[0]['name']}}</p></div>
+          <div class="age"><p>Возраст - {{persons_list[0]['age']}}</p></div>
+          <div class="country"><p>Страна - {{persons_list[0]['country']}}</p></div>
+          <div class="city"><p>Город - {{persons_list[0]['city']}}</p></div>
+          <div class="address"><p>Адрес - {{persons_list[0]['address']}}</p></div>
+
+          <div class="languages"><p>Языки - {{persons_list[0]['languages']}}</p></div>
+          <div class="contacts"><p>Контакты - {{persons_list[0]['contacts']}}</p></div>
           <div class="about-1"><p>О себе</p></div>
-          <p class="about-2">{{persons_list[0]['About']}}</p>
+          <p class="about-2">{{persons_list[0]['about']}}</p>
+        </div>
       </div>
-      </div>  
-    
+    </div>
+
     <img src="static/resources/img/_No_.png" alt="" class="no-button">
     <img src="static/resources/img/_Yes_.png" alt="" class="yes-button">
-  </body>
-</html>
+{% endblock %}
+
+
+
