@@ -1,7 +1,5 @@
-from flask import url_for, Flask, render_template, request
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
-from werkzeug.utils import redirect
-
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/profiles.db'
