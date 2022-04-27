@@ -11,66 +11,77 @@
 {% block body %}
     <div class="reg_form">
     <form method="post">
-{#        <div class="mb-3">#}
+        <div class="mb-3">
             <label for="email_input" class="form-label">Email адресс</label>
             <input name="email" type="email" class="form-control" id="email_input" placeholder="name@example.com">
-{#        </div>#}
+        </div>
 
         <label for="username_input" class="form-label">Username</label>
         <input name="username" class="form-control" type="text" placeholder="user" id="username_input">
 
-{#        <div class="mb-3">#}
+        <div class="mb-3">
             <label for="name_input" class="form-label">Имя</label>
             <input name="name" class="form-control" type="text" placeholder="Иван Иванов" id="name_input">
-{#        </div>#}
+        </div>
 
 
-{#        <div class="mb-3">#}
+        <div class="mb-3">
             <label for="age_input" class="form-label">Возраст</label>
             <input name="age" class="form-control" type="number" placeholder="0" id="age_input">
-{#        </div>#}
+        </div>
 
 
-{#        <div class="mb-3">#}
+        <div class="mb-3">
             <label for="country_input" class="form-label">Страна</label>
             <input name="country" class="form-control" type="text" placeholder="USA" id="country_input">
-{#        </div>#}
+        </div>
 
 
-{#        <div class="mb-3">#}
+        <div class="mb-3">
             <label for="city_input" class="form-label">Город</label>
             <input name="city" class="form-control" type="text" placeholder="New-York" id="city_input">
-{#        </div>#}
+        </div>
 
 
-{#        <div class="mb-3"></div>#}
-        <label for="languages_input" class="form-label">Языки</label>
-        <input name="languages" class="form-control" type="text" placeholder="English" id="languages_input">
+        <div class="mb-3">
+            <label for="languages_input" class="form-label">Языки</label>
+            <input name="languages" class="form-control" type="text" placeholder="English" id="languages_input">
+        </div>
 
-{#        <div class="mb-3"></div>#}
-        <label for="address_input" class="form-label">Адресс</label>
-        <input name="address" class="form-control" type="text" placeholder="Baker Street" id="address_input">
 
-{#        <div class="mb-3"></div>#}
-        <label for="phone_input" class="form-label">Телефон</label>
+        <div class="mb-3">
+            <label for="address_input" class="form-label">Адресс</label>
+            <input name="address" class="form-control" type="text" placeholder="Baker Street" id="address_input">
+        </div>
+
+
+        <div class="mb-3">
+             <label for="phone_input" class="form-label">Телефон</label>
         <input name="phone" class="form-control" type="text" placeholder="+7..." id="phone_input">
+        </div>
 
-{#        <div class="mb-3"></div>#}
+
+        <div class="mb-3"></div>
         <label for="contacts_input" class="form-label">Контакты</label>
         <input name="contacts" class="form-control" type="text" placeholder="..." id="contacts_input">
 
-{#        <div class="mb-3"></div>#}
+        <div class="mb-3"></div>
         <label for="about_input" class="form-label">О себе</label>
         <textarea name="about_text" class="form-control" id="about_input" rows="3"></textarea>
 
-{#        <div class="mb-3">#}
+        <div class="mb-3">
         <label for="photo_input" class="form-label">Загрузите фото</label>
         <input name="photo" class="form-control" type="file" id="photo_input">
-{#        </div>#}
+        </div>
 
         <label for="inputPassword" class="col-sm-2 col-form-label">Пароль</label>
         <div class="col-sm-10">
             <input name="password" type="password" class="form-control" id="inputPassword">
+        </div>
+
+        <label for="inputPassword" class="col-sm-2 col-form-label">Повторите пароль</label>
+        <div class="col-sm-10">
+            <input name="password2" type="password" class="form-control" id="inputPassword">
         </div>
 
         <input type="submit" class="btn btn-dark mx-0 my-3" value="Отправить">
