@@ -31,7 +31,7 @@ class DB:
             "Languages": record[5],
             "Address": record[6],
             "Phone": record[7],
-            "Contacts": record[8],
+            "Contacts": record[8].split(","),
             "About": record[9],
             "Photo": record[10],
         }

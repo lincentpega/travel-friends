@@ -9,7 +9,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
-    height: 100vh;
 }
 
 
@@ -21,6 +20,9 @@ a {
 .header {
     padding: 8px;
     display: flex;
+    position: fixed;
+    width: 100vw;
+    top: 0;
     font-size: 20px;
     justify-content: space-evenly;
     background-color: #1E4959;
@@ -55,6 +57,72 @@ a {
     z-index: -1;
 }
 
+.photo > img {
+    border: #1E4959 solid 2px;
+    border-radius: 12px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .person {
+    margin: 128px 64px 64px 64px;
     display: flex;
+    align-items: center;
+    width: auto;
+    justify-content: center;
+}
+
+.info {
+    max-width: 556px;
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0px 8px 32px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #EBF1F2;
+}
+
+.name {
+    text-align: center;
+    font-size: 32px;
+}
+
+.left-arrow {
+    position: fixed;
+    top: 50%;
+    right: 2%;
+    width: 48px;
+    height: 48px;
+    border-top: 8px solid #4D736F;
+    border-right: 8px solid #4D736F;
+    transform: rotate(45deg);
+    transition: .2s;
+}
+
+.left-arrow:hover {
+    border-top: 10px solid #1E4959;
+    border-right: 10px solid #1E4959;
+}
+
+.right-arrow {
+    position: fixed;
+    top: 50%;
+    left: 2%;
+    width: 48px;
+    height: 48px;
+    border-top: 8px solid #4D736F;
+    border-right: 8px solid #4D736F;
+    transform: rotate(-135deg);
+    transition: .2s;
+}
+
+.right-arrow:hover {
+    border-top: 10px solid #1E4959;
+    border-right: 10px solid #1E4959;
 }
